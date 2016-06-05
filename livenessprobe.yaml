@@ -1,0 +1,8 @@
+spec:
+  containers:
+    - image: b.gcr.io/kuar/influxdb:0.9.4.2
+      name: influxdb
+      livenessProbe:
+        httpGet:
+          path: /ping
+          port: 8086

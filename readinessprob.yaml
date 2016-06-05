@@ -1,0 +1,10 @@
+spec:
+  containers:
+    - image: b.gcr.io/kuar/influxdb:0.9.4.2
+      name: influxdb
+      readinessProbe:
+        httpGet:
+          path: /ping
+      port: 8086
+      initialDelaySeconds: 5
+      timeoutSeconds: 1
